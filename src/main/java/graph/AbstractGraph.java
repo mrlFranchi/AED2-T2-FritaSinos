@@ -99,4 +99,52 @@ public abstract class AbstractGraph implements GraphInterface, Cloneable
         graphClone.setVertices(new ArrayList<>(this.getVertices()));
         return graphClone;
     }
+
+    public Vertex getOuterMostVertex(float[][] distanceMatrix){
+        var minDistanceInColumn = new float[distanceMatrix.length];
+        Arrays.fill(minDistanceInColumn, Float.NEGATIVE_INFINITY);
+        for (var i = 0; i < distanceMatrix.length; i++)
+        {
+            for (var j = 0; j < distanceMatrix[0].length; j++)
+            {
+                if (minDistanceInColumn[i] < distanceMatrix[i][j])
+                {
+                    minDistanceInColumn[i] = distanceMatrix[i][j];
+                }
+            }
+        }
+        int vertexIndex = getMaxDistanceIndexInColumn(minDistanceInColumn);
+        return vertices.get(vertexIndex);
+    }
+    /*
+        Retorna o indice da maior distancia na coluna
+    */
+    private int getMaxDistanceIndexInColumn(float[] distanceArray)
+    {
+        var maxIndex = 0;
+        float maxDistance = distanceArray[0];
+        for (var i = 1; i < distanceArray.length; i++)
+        {
+            if(maxDistance < distanceArray[i])
+            {
+                maxDistance = distanceArray[i];
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
+    
+    public Vertex getMostDistantVertex(float[][] distanceMatrix, Vertex source){
+        int index = vertices.indexOf(source);
+        int furthest = 0;
+        float dist = Float.NEGATIVE_INFINITY;
+        for (int j=0; j<distanceMatrix[index].length; j++){
+            if (distanceMatrix[index][j]>dist){
+                dist = distanceMatrix[index][j];
+                furthest = j;
+            }
+        }
+        return vertices.get(furthest);
+    }
+
 }
