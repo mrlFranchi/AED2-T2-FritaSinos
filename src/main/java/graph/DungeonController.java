@@ -61,22 +61,21 @@ public class DungeonController
         AbstractGraph dungeon = dungeonController.dungeon;
         TraversalStrategyInterface traversalStrategy;
         traversalStrategy = new PrimMSTTraversal(dungeon);
-        traversalStrategy.traverseGraph(dungeon.getVertices().get(0), null);
+        traversalStrategy.traverseGraph(dungeon.getVertices().get(0),null);
         dungeonController.dungeon = GraphConverter.predecessorListToGraph(dungeon, traversalStrategy.getPredecessorArray());
     }
 
     private static void setSpecialRooms(DungeonController dungeonController)
     {
         AbstractGraph dungeon = dungeonController.dungeon;
-        TraversalStrategyInterface traversalStrategy = new FloydWarshallTraversal(dungeon);
+        FloydWarshallTraversal traversalStrategy = new FloydWarshallTraversal(dungeon);
         traversalStrategy.traverseGraph(dungeon.getVertices().get(0), null);
-        Room center = (Room) dungeon.getCentermostVertex(((FloydWarshallTraversal)traversalStrategy).getDistanceMatrix());
+        Room center = (Room) dungeon.getCentermostVertex(traversalStrategy.getDistanceMatrix());
         center.setCheckpoint(true);
-        Room entrance = (Room) dungeon.getOuterMostVertex(((FloydWarshallTraversal)traversalStrategy).getDistanceMatrix());
+        Room entrance = (Room) dungeon.getOuterMostVertex(traversalStrategy.getDistanceMatrix());
         entrance.setEntrance(true);
         dungeonController.entrance = entrance;
-        //Exit == entrance
-        Room exit = (Room) dungeon.getMostDistantVertex(((FloydWarshallTraversal)traversalStrategy).getDistanceMatrix(), entrance);
+        Room exit = (Room) dungeon.getMostDistantVertex(traversalStrategy.getDistanceMatrix(), entrance);
         exit.setExit(true);
         dungeonController.exit = exit;
     }

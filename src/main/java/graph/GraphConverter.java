@@ -18,6 +18,7 @@ public class GraphConverter {
             destination = (Room)dungeon.getVertices().get(i);
             distance = dungeon.calcDistance(source, destination);
             newDungeon.addEdge(source, destination, distance);
+            newDungeon.addEdge(destination, source, distance);
         }
         return newDungeon;
     }
