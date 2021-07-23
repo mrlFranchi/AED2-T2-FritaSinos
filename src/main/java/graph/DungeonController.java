@@ -75,6 +75,7 @@ public class DungeonController
         Room entrance = (Room) dungeon.getOuterMostVertex(((FloydWarshallTraversal)traversalStrategy).getDistanceMatrix());
         entrance.setEntrance(true);
         dungeonController.entrance = entrance;
+        //Exit == entrance
         Room exit = (Room) dungeon.getMostDistantVertex(((FloydWarshallTraversal)traversalStrategy).getDistanceMatrix(), entrance);
         exit.setExit(true);
         dungeonController.exit = exit;
