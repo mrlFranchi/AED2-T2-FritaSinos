@@ -38,6 +38,11 @@ public final class GraphController
 
         graphController.g = new GraphMap(graphController.vertices);
         graphController.test("MapGraph");
+
+        //Main Ex6
+        GraphController dungeonController = new GraphController();
+        dungeonController.dungeon = new DigraphList();
+        dungeonController.testDungeon("ListDigraph");
     }
 
     private static List<Vertex> createVertexList()
@@ -85,5 +90,29 @@ public final class GraphController
         g.addEdge(g.getVertices().get(0), g.getVertices().get(6), 10);
 
         traversalStrategy = new PrimMSTTraversal(g);
+    }
+
+    private void testDungeon(String fileName){
+        Scanner read = new Scanner(System.in);
+        int seed = read.nextInt();
+        int nRooms = read.nextInt();
+        RandomSingleton.getInstance(seed); //Inicializar gerador de números aleatórios com a semente fornecida pelo usuário
+        RandomDungeonGenerator randomDungeonGenerator = new RandomDungeonGenerator(nRooms); //Gerar n salas
+        dungeon = randomDungeonGenerator.getDungeon(); //Pegar o grafo com salas
+        DelaunayTriangulation.triangulateGraphVertices(dungeon); //Criar arestas
+//        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeonController.dungeon).setVisible(true)); //Imprime a Dungeon
+
+        traversalStrategy = new PrimMSTTraversal(dungeon);
+        traversalStrategy.traverseGraph(dungeon.getVertices().get(0));
+
+        //Pegar a lista de vértices predecessores criada na execução do algoritmo de Prim
+        int[] predecessorIndexList = traversalStrategy.getPredecessorArray();
+        //Converter a lista para uma nova dungeon
+        dungeon = convertPredecessorListToGraph(dungeon, predecessorIndexList);
+//        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon).setVisible(true)); //Imprime a Dungeon
+
+        traversalStrategy = new BreadthFirstTraversal(dungeon);
+        traversalStrategy.traverseGraph(dungeon.getVertices().get(0));
+//        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon).setVisible(true)); //Imprime a Dungeon
     }
 }
