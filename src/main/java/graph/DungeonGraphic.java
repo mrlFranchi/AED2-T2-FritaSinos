@@ -21,6 +21,17 @@ public class DungeonGraphic extends JFrame
         this.repaint();
     }
 
+    public DungeonGraphic(String title, AbstractGraph graph, @Nullable List<Vertex> traversalPath){
+        super(title);
+        this.graph = graph;
+        this.traversalPath = traversalPath;
+        getContentPane().setBackground(Color.black);
+        setSize(900, 900);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        this.repaint();
+    }
+
     private void drawDungeon(Graphics g)
     {
         Graphics2D graphics2D = (Graphics2D) g;

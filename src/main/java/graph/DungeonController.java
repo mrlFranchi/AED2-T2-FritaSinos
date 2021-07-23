@@ -24,14 +24,14 @@ public class DungeonController
         DungeonController dungeonController = new DungeonController();
         createRandomDungeon(dungeonController);
         DelaunayTriangulation.triangulateGraphVertices(dungeonController.dungeon);
-        CreateDungeonGraphic(dungeonController);
+        CreateDungeonGraphic(dungeonController,"DelauneyTriangulation");
         ReplaceDungeonWithMST(dungeonController);
-        CreateDungeonGraphic(dungeonController);
+        CreateDungeonGraphic(dungeonController,"MST");
         setSpecialRooms(dungeonController);
         List<Vertex> traversalPath = getPathFromEntranceToExit(dungeonController);
-        CreateDungeonGraphic(dungeonController, traversalPath);
+        CreateDungeonGraphic(dungeonController, traversalPath,"Special Rooms");
         setLocksAndKeys(dungeonController);
-        CreateDungeonGraphic(dungeonController, traversalPath);
+        CreateDungeonGraphic(dungeonController, traversalPath,"Keys And Locks");
     }
 
     private static void CreateDungeonGraphic(DungeonController dungeonController)
@@ -42,6 +42,15 @@ public class DungeonController
     private static void CreateDungeonGraphic(DungeonController dungeonController, List<Vertex> traversalPath)
     {
         SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeonController.dungeon, traversalPath).setVisible(true));
+    }
+
+    private static void CreateDungeonGraphic(DungeonController dungeonController, String title)
+    {
+        SwingUtilities.invokeLater(() -> new DungeonGraphic(title, dungeonController.dungeon, null).setVisible(true));
+    }
+    private static void CreateDungeonGraphic(DungeonController dungeonController, List<Vertex> traversalPath,String title)
+    {
+        SwingUtilities.invokeLater(() -> new DungeonGraphic(title, dungeonController.dungeon, traversalPath).setVisible(true));
     }
 
     private static void createRandomDungeon(DungeonController dungeonController)
