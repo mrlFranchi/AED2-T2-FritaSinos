@@ -2,7 +2,6 @@ package graph;
 
 public class GraphConverter {
 
-    /* TODO: This class*/
     public static AbstractGraph predecessorListToGraph(AbstractGraph dungeon, int[] predecessor){
         AbstractGraph newDungeon = new DigraphList();
         //Adicionar os vértices da lista original

@@ -1,8 +1,12 @@
 package graph;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Logger;
+
+import static graph.GraphConverter.predecessorListToGraph;
 
 public final class GraphController
 {
@@ -11,6 +15,7 @@ public final class GraphController
     private AbstractGraph g;
     private TraversalStrategyInterface traversalStrategy;
     private final List<Vertex> vertices;
+    private AbstractGraph dungeon;
 
     private GraphController()
     {
@@ -100,19 +105,19 @@ public final class GraphController
         RandomDungeonGenerator randomDungeonGenerator = new RandomDungeonGenerator(nRooms); //Gerar n salas
         dungeon = randomDungeonGenerator.getDungeon(); //Pegar o grafo com salas
         DelaunayTriangulation.triangulateGraphVertices(dungeon); //Criar arestas
-//        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeonController.dungeon).setVisible(true)); //Imprime a Dungeon
+        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon,null).setVisible(true)); //Imprime a Dungeon
 
         traversalStrategy = new PrimMSTTraversal(dungeon);
-        traversalStrategy.traverseGraph(dungeon.getVertices().get(0));
+        traversalStrategy.traverseGraph(dungeon.getVertices().get(0),null);
 
         //Pegar a lista de vértices predecessores criada na execução do algoritmo de Prim
         int[] predecessorIndexList = traversalStrategy.getPredecessorArray();
         //Converter a lista para uma nova dungeon
-        dungeon = convertPredecessorListToGraph(dungeon, predecessorIndexList);
-//        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon).setVisible(true)); //Imprime a Dungeon
+        dungeon = predecessorListToGraph(dungeon, predecessorIndexList);
+        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon,null).setVisible(true)); //Imprime a Dungeon
 
         traversalStrategy = new BreadthFirstTraversal(dungeon);
-        traversalStrategy.traverseGraph(dungeon.getVertices().get(0));
-//        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon).setVisible(true)); //Imprime a Dungeon
+        traversalStrategy.traverseGraph(dungeon.getVertices().get(0),null);
+        SwingUtilities.invokeLater(() -> new DungeonGraphic(dungeon,null).setVisible(true)); //Imprime a Dungeon
     }
 }
