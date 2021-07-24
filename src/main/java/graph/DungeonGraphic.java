@@ -39,6 +39,7 @@ public class DungeonGraphic extends JFrame
         {
             for (int i = 0; i < graph.getNumberOfVertices(); i++)
             {
+                String id = "";
                 graphics2D.setColor(Color.WHITE);
                 Vertex currentVertex = graph.getVertices().get(i);
                 graphics2D.draw(((Room)currentVertex).getRoom());
@@ -61,7 +62,11 @@ public class DungeonGraphic extends JFrame
                 {
                     graphics2D.setColor(Color.MAGENTA);
                     graphics2D.draw(((Room) currentVertex).getRoom());
+                    Point pt = ((Room) currentVertex).getPoint();
+                    id = id+"K"+i;
                 }
+                Point pt = ((Room) currentVertex).getPoint();
+                g.drawString(""+i+" "+id, pt.x, pt.y-2);
                 Vertex adjacentVertex = graph.getFirstConnectedVertex(currentVertex);
                 while(adjacentVertex != null)
                 {
@@ -75,7 +80,10 @@ public class DungeonGraphic extends JFrame
                     }
                     if(graph.getEdge(currentVertex, adjacentVertex).getLockID() > -1)
                     {
-                        g.setColor(Color.ORANGE);
+                        g.setColor(Color.GREEN);
+                        g.drawString("L"+graph.getEdge(currentVertex, adjacentVertex).getLockID(),
+                                (int)Math.abs((((Room) currentVertex).getPoint().getX() + ((Room) adjacentVertex).getPoint().getX())/2),
+                                (int)Math.abs((((Room) currentVertex).getPoint().getY() + ((Room) adjacentVertex).getPoint().getY())/2));
                     }
                     g.drawLine((int)((Room) currentVertex).getPoint().getX(), (int)((Room) currentVertex).getPoint().getY(),
                             (int)((Room) adjacentVertex).getPoint().getX(),
