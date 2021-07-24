@@ -63,7 +63,7 @@ public class DungeonGraphic extends JFrame
                     graphics2D.setColor(Color.MAGENTA);
                     graphics2D.draw(((Room) currentVertex).getRoom());
                     Point pt = ((Room) currentVertex).getPoint();
-                    id = id+"K"+i;
+                    id = id+"K"+((Room) currentVertex).getKeyID();
                 }
                 Point pt = ((Room) currentVertex).getPoint();
                 g.drawString(""+i+" "+id, pt.x, pt.y-2);
