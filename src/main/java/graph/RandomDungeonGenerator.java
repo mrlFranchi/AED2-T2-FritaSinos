@@ -47,8 +47,8 @@ public class RandomDungeonGenerator
         RandomSingleton randomSingleton = RandomSingleton.getInstance();
         int width = Math.max(randomSingleton.nextInt(maxWidth), 10);
         int height = Math.max(randomSingleton.nextInt(maxHeight), 10);
-        int x = randomSingleton.nextInt(800);
-        int y = randomSingleton.nextInt(800);
+        int x = Math.max(randomSingleton.nextInt(800),width+5);
+        int y = Math.max(randomSingleton.nextInt(800),height+5);
         return new Rectangle(new Point(x, y), new Dimension(width, height));
     }
 }
