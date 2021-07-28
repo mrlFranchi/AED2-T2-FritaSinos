@@ -74,7 +74,6 @@ public final class KeyLockGenerator extends BreadthFirstTraversal
     {
         Vertex source = getGraph().getVertices().get(previousVertexIndex);
         Vertex destination = getGraph().getVertices().get(newVertexIndex);
-        System.out.println("Locking: "+previousVertexIndex+" and "+ newVertexIndex + " with lock "+ nCreatedLocks);
         getGraph().lockEdge(source, destination, nCreatedLocks);
         getGraph().lockEdge(destination, source, nCreatedLocks);
         nCreatedLocks++;
