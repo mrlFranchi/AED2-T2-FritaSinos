@@ -80,7 +80,11 @@ public class DungeonGraphic extends JFrame
                     }
                     if(graph.getEdge(currentVertex, adjacentVertex).getLockID() > -1)
                     {
-                        g.setColor(Color.GREEN);
+                        if (g.getColor() == Color.CYAN){
+                            g.setColor(Color.lightGray);
+                        }else {
+                            g.setColor(Color.GREEN);
+                        }
                         g.drawString("L"+graph.getEdge(currentVertex, adjacentVertex).getLockID(),
                                 (int)Math.abs((((Room) currentVertex).getPoint().getX() + ((Room) adjacentVertex).getPoint().getX())/2),
                                 (int)Math.abs((((Room) currentVertex).getPoint().getY() + ((Room) adjacentVertex).getPoint().getY())/2));
