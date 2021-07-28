@@ -93,7 +93,7 @@ public abstract class TraversalStrategyInterface
         StringBuilder visitedPath = new StringBuilder();
         for (Vertex vertex : traversalPath)
         {
-            visitedPath.append(vertex).append(' ').
+            visitedPath.append("Vertex id: ").append(getGraph().getVertices().indexOf(vertex)).append(" ").append(vertex).append(' ').
                     append("Distance: ").append(getDistanceToVertex(getGraph().getVertices().indexOf(vertex))).append(' ').append("\n");
         }
         String traversalPathString = visitedPath.toString();

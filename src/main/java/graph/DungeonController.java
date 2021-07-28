@@ -32,6 +32,15 @@ public class DungeonController
         CreateDungeonGraphic(dungeonController, traversalPath,"Special Rooms");
         setLocksAndKeys(dungeonController);
         CreateDungeonGraphic(dungeonController, traversalPath,"Keys And Locks");
+
+        TraversalStrategyInterface BFT = new BreadthFirstTraversal(dungeonController.dungeon);
+        BFT.traverseGraph(dungeonController.entrance, dungeonController.exit);
+        TraversalStrategyInterface DFT = new DepthFirstTraversal(dungeonController.dungeon);
+        DFT.traverseGraph(dungeonController.entrance, dungeonController.exit);
+        TraversalStrategyInterface aStar = new AStartPathFind(dungeonController.dungeon);
+        aStar.traverseGraph(dungeonController.entrance, dungeonController.exit);
+
+
     }
 
     private static void CreateDungeonGraphic(DungeonController dungeonController)
