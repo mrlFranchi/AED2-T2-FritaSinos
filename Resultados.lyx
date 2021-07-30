@@ -1,0 +1,216 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Resultados
+\end_layout
+
+\begin_layout Standard
+Foram geradas 3 
+\emph on
+dungeons,
+\emph default
+ nomeadas aqui no formato: [SEED]-[ROOMS]-[KEYS].
+ 
+\end_layout
+
+\begin_layout Standard
+A dungeon consistem em [ROOMS] salas, marcadas com seus IDs para identificação,
+ que são coloridas conforme a regra: As salas com borda branca são salas
+ comuns, a sala verde é a entrada da dungeon, aproximadamente no meio do
+ caminho tem uma sala amarela que é um checkpoint, e por fim temos a sala
+ vermelha que é sala final da dungeon.
+ As salas com borda magenta são as salas que possuem uma chave, e o ID da
+ chave é mostrado junto com o ID da sala no formato [IDsala] K[IDchave].
+\end_layout
+
+\begin_layout Standard
+As arestas são os possiveis caminhos entre as salas.
+ As arestas rosa claro são os possiveis caminhos que não foram percorridos,
+ em ciano é o menor caminho até a sala final (desconsiderando os caminhos
+ trancados), as verdes são as arestas trancadas e estão marcadas com L[ID]
+ que é o ID da chave que abre aquele caminho, em cinza são os caminhos trancados
+ mas que fazem parte do menor caminho.
+\end_layout
+
+\begin_layout Standard
+As dungeons gerados foram as seguintes:
+\end_layout
+
+\begin_layout Subsection*
+
+\emph on
+Dungeon
+\emph default
+ 23-27-5:
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Graphics
+	filename Dungeons/23-27-5.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O Algoritmo DFT visitou as salas na seguinte sequência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+18 & \rightarrow13\rightarrow08\rightarrow10\rightarrow15\rightarrow16\rightarrow07\rightarrow17\rightarrow20\rightarrow21\rightarrow\\
+03 & \rightarrow14\rightarrow04\rightarrow25\rightarrow06\rightarrow01\rightarrow02\rightarrow12\rightarrow19\rightarrow00\rightarrow\\
+11 & \rightarrow05\rightarrow26\rightarrow09\rightarrow24\rightarrow22\rightarrow[23]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ja o algortimo DFT, visitou nessa sequência:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+18 & \rightarrow13\rightarrow08\rightarrow10\rightarrow16\rightarrow07\rightarrow20\rightarrow03\rightarrow04\rightarrow06\rightarrow\\
+02 & \rightarrow05\rightarrow12\rightarrow19\rightarrow26\rightarrow14\rightarrow25\rightarrow01\rightarrow00\rightarrow11\rightarrow\\
+09 & \rightarrow22[\rightarrow23\rightarrow24\rightarrow17\rightarrow21\rightarrow15]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E o A*:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+18 & \rightarrow13\rightarrow08\rightarrow10\rightarrow16\rightarrow7\rightarrow20\rightarrow14\rightarrow25\rightarrow01\rightarrow11\rightarrow\\
+09 & \rightarrow22
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos notar que o Algoritmo A* é o aquele que leva mais rapidamente ao
+ final da dungeon.
+\end_layout
+
+\begin_layout Subsection*
+
+\emph on
+Dungeon 
+\emph default
+31-23-7
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Dungeons/31-23-7.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os caminhos foram:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
