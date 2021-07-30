@@ -89,11 +89,22 @@ dungeons,
 \end_layout
 
 \begin_layout Standard
-A dungeon consistem em [ROOMS] salas, marcadas com seus IDs para identificação,
- que são coloridas conforme a regra: As salas com borda branca são salas
- comuns, a sala verde é a entrada da dungeon, aproximadamente no meio do
- caminho tem uma sala amarela que é um checkpoint, e por fim temos a sala
- vermelha que é sala final da dungeon.
+A 
+\emph on
+dungeon
+\emph default
+ consistem em [ROOMS] salas, marcadas com seus IDs para identificação, que
+ são coloridas conforme a regra: As salas com borda branca são salas comuns,
+ a sala verde é a entrada da 
+\emph on
+dungeon
+\emph default
+, aproximadamente no meio do caminho tem uma sala amarela que é um checkpoint,
+ e por fim temos a sala vermelha que é sala final da 
+\emph on
+dungeon
+\emph default
+.
  As salas com borda magenta são as salas que possuem uma chave, e o ID da
  chave é mostrado junto com o ID da sala no formato [IDsala] K[IDchave].
 \end_layout
@@ -108,7 +119,16 @@ As arestas são os possiveis caminhos entre as salas.
 \end_layout
 
 \begin_layout Standard
-As dungeons gerados foram as seguintes:
+Os caminhos mostrados são as salas na ordem que foram visitadas pela primeira
+ vez.
+\end_layout
+
+\begin_layout Standard
+As 
+\emph on
+dungeons
+\emph default
+ gerados foram as seguintes:
 \end_layout
 
 \begin_layout Subsection*
@@ -132,7 +152,7 @@ Dungeon
 \end_layout
 
 \begin_layout Standard
-O Algoritmo DFT visitou as salas na seguinte sequência:
+O Algoritmo BFT visitou as salas na seguinte sequência:
 \end_layout
 
 \begin_layout Standard
@@ -140,7 +160,7 @@ O Algoritmo DFT visitou as salas na seguinte sequência:
 \begin{align*}
 18 & \rightarrow13\rightarrow08\rightarrow10\rightarrow15\rightarrow16\rightarrow07\rightarrow17\rightarrow20\rightarrow21\rightarrow\\
 03 & \rightarrow14\rightarrow04\rightarrow25\rightarrow06\rightarrow01\rightarrow02\rightarrow12\rightarrow19\rightarrow00\rightarrow\\
-11 & \rightarrow05\rightarrow26\rightarrow09\rightarrow24\rightarrow22\rightarrow[23]
+11 & \rightarrow05\rightarrow26\rightarrow09\rightarrow24\rightarrow22[\rightarrow23]
 \end{align*}
 
 \end_inset
@@ -183,7 +203,11 @@ E o A*:
 
 \begin_layout Standard
 Podemos notar que o Algoritmo A* é o aquele que leva mais rapidamente ao
- final da dungeon.
+ final da 
+\emph on
+dungeon
+\emph default
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -209,7 +233,195 @@ Os caminhos foram:
 \end_layout
 
 \begin_layout Standard
+BFT:
+\end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+13 & \rightarrow20\rightarrow07\rightarrow02\rightarrow10\rightarrow12\rightarrow14\rightarrow03\rightarrow08\rightarrow22\rightarrow\\
+17 & \rightarrow15\rightarrow04\rightarrow01\rightarrow05\rightarrow21\rightarrow19\rightarrow06\rightarrow11\rightarrow00\rightarrow\\
+09 & \rightarrow16\rightarrow18
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DFT:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+13 & \rightarrow20\rightarrow07\rightarrow02\rightarrow10\rightarrow12\rightarrow03\rightarrow22\rightarrow15\rightarrow04\rightarrow\\
+01 & \rightarrow05\rightarrow21\rightarrow06\rightarrow00\rightarrow09\rightarrow16\rightarrow18[\rightarrow19\rightarrow11\rightarrow\\
+14 & \rightarrow08\rightarrow17]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A*:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+13 & \rightarrow20\rightarrow07\rightarrow02\rightarrow10\rightarrow12\rightarrow03\rightarrow22\rightarrow15\rightarrow\\
+01 & \rightarrow05\rightarrow21\rightarrow06\rightarrow00\rightarrow09\rightarrow16\rightarrow18
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+
+\emph on
+Dungeon
+\emph default
+ 37-19-3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Dungeons/37-19-3.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os caminhos tomados foram:
+\end_layout
+
+\begin_layout Standard
+BFT:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+13 & \rightarrow00\rightarrow16\rightarrow18\rightarrow14\rightarrow06\rightarrow04\rightarrow09\rightarrow02\rightarrow01\rightarrow\\
+05 & \rightarrow11\rightarrow12\rightarrow15\rightarrow07\rightarrow08\rightarrow10\rightarrow17[\rightarrow3]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+DFT:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+13 & \rightarrow00\rightarrow16\rightarrow18\rightarrow14\rightarrow06\rightarrow04\rightarrow09\rightarrow02\rightarrow01\rightarrow\\
+11 & \rightarrow15\rightarrow07\rightarrow08\rightarrow17[\rightarrow10\rightarrow03\rightarrow12\rightarrow05]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A*:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+13 & \rightarrow00\rightarrow16\rightarrow18\rightarrow14\rightarrow06\rightarrow04\rightarrow09\rightarrow02\rightarrow01\rightarrow\\
+11 & \rightarrow08\rightarrow07\rightarrow17
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nota: os caminhos entre colchetes são os as salas visitadas após a sala
+ final.
+\end_layout
+
+\begin_layout Subsection*
+Análise:
+\end_layout
+
+\begin_layout Standard
+Podemos notar que, ao dar o vertice de destino no A*, ele é oque leva mais
+ rapido ao destino, enquanto nos algoritmos de BFT e DFT exploraram a 
+\emph on
+dungeon
+\emph default
+ em sua totalidade.
+ 
+\end_layout
+
+\begin_layout Standard
+O Algoritmo DFT pode encontrar o final da 
+\emph on
+dungeon
+\emph default
+ mais rapidamente, se escolher a sequencai de caminho certo, enquanto o
+ BFT é oque possui mais 
+\emph on
+bactracking.
+\end_layout
+
+\begin_layout Section*
+Conclusão:
+\end_layout
+
+\begin_layout Standard
+Podemos classificar jogadores em duas categorias: Aqueles que querem completar
+ a 
+\emph on
+dungeon
+\emph default
+ o mais rapido possivel, os corredores, e aqueles que querem explorar por
+ completo, os completistas.
+ 
+\end_layout
+
+\begin_layout Standard
+O algoritmo A* demonstra claramente um comportamento corredor, onde o mais
+ importante é terminar a 
+\emph on
+dungeon
+\emph default
+.
+ Isso demonstra jogadores que ja tem um conhecimento prévio sobre a área
+ e qual a sala final, no caso do algoritmo ele tem o conhecimento das distâncias
+ e qual a sala final.
+\end_layout
+
+\begin_layout Standard
+O Algoritmo DFT demonstra o comportamento dos jogadores completistas, onde
+ chegar ao final é secundário, e está explorando pela primeira vez, onde
+ o grupo escolhe um caminho e o explora até o final.
+\end_layout
+
+\begin_layout Standard
+Já o algoritmo BFT não demonstra um comportamento muito humano, devido a
+ grande quantidade de backtracking necessário para percorrer a 
+\emph on
+dungeon
+\emph default
+ nesse algoritmo, ele parece até mesmo indeciso com o caminho a ser tomado.
 \end_layout
 
 \end_body
