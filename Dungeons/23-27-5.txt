@@ -1,0 +1,78 @@
+Caminhos:
+BFT
+class graph.BreadthFirstTraversal
+Vertex id: 18 Room{(X, Y)= (418.0, 756.0)} Distance: 0.0 
+Vertex id: 13 Room{(X, Y)= (212.0, 704.0)} Distance: 212.46176 
+Vertex id: 8 Room{(X, Y)= (119.0, 744.0)} Distance: 313.6991 
+Vertex id: 10 Room{(X, Y)= (85.0, 618.0)} Distance: 444.2058 
+Vertex id: 15 Room{(X, Y)= (327.0, 611.0)} Distance: 560.5857 
+Vertex id: 16 Room{(X, Y)= (34.0, 587.0)} Distance: 503.8883 
+Vertex id: 7 Room{(X, Y)= (15.0, 542.0)} Distance: 552.735 
+Vertex id: 17 Room{(X, Y)= (72.0, 566.0)} Distance: 547.3049 
+Vertex id: 20 Room{(X, Y)= (291.0, 437.0)} Distance: 848.03314 
+Vertex id: 21 Room{(X, Y)= (273.0, 461.0)} Distance: 774.0779 
+Vertex id: 3 Room{(X, Y)= (181.0, 286.0)} Distance: 1034.8512 
+Vertex id: 14 Room{(X, Y)= (496.0, 365.0)} Distance: 1065.3094 
+Vertex id: 4 Room{(X, Y)= (29.0, 217.0)} Distance: 1201.7793 
+Vertex id: 25 Room{(X, Y)= (538.0, 324.0)} Distance: 1124.0035 
+Vertex id: 6 Room{(X, Y)= (111.0, 130.0)} Distance: 1321.3326 
+Vertex id: 1 Room{(X, Y)= (690.0, 310.0)} Distance: 1276.647 
+Vertex id: 2 Room{(X, Y)= (294.0, 100.0)} Distance: 1506.7754 
+Vertex id: 12 Room{(X, Y)= (80.0, 97.0)} Distance: 1366.6096 
+Vertex id: 19 Room{(X, Y)= (151.0, 175.0)} Distance: 1381.5406 
+Vertex id: 0 Room{(X, Y)= (483.0, 447.0)} Distance: 1524.8767 
+Vertex id: 11 Room{(X, Y)= (768.0, 255.0)} Distance: 1372.088 
+Vertex id: 5 Room{(X, Y)= (444.0, 102.0)} Distance: 1656.7887 
+Vertex id: 26 Room{(X, Y)= (396.0, 226.0)} Distance: 1631.7925 
+Vertex id: 9 Room{(X, Y)= (758.0, 461.0)} Distance: 1578.3306 
+Vertex id: 24 Room{(X, Y)= (769.0, 76.0)} Distance: 1551.0908 
+Vertex id: 22 Room{(X, Y)= (656.0, 554.0)} Distance: 1716.3632 
+Vertex id: 23 Room{(X, Y)= (717.0, 481.0)} Distance: 1623.9485 
+
+********
+DFT
+class graph.DepthFirstTraversal
+Vertex id: 18 Room{(X, Y)= (418.0, 756.0)} Distance: Infinity 
+Vertex id: 13 Room{(X, Y)= (212.0, 704.0)} Distance: Infinity 
+Vertex id: 8 Room{(X, Y)= (119.0, 744.0)} Distance: Infinity 
+Vertex id: 10 Room{(X, Y)= (85.0, 618.0)} Distance: Infinity 
+Vertex id: 16 Room{(X, Y)= (34.0, 587.0)} Distance: Infinity 
+Vertex id: 7 Room{(X, Y)= (15.0, 542.0)} Distance: Infinity 
+Vertex id: 20 Room{(X, Y)= (291.0, 437.0)} Distance: Infinity 
+Vertex id: 3 Room{(X, Y)= (181.0, 286.0)} Distance: Infinity 
+Vertex id: 4 Room{(X, Y)= (29.0, 217.0)} Distance: Infinity 
+Vertex id: 6 Room{(X, Y)= (111.0, 130.0)} Distance: Infinity 
+Vertex id: 2 Room{(X, Y)= (294.0, 100.0)} Distance: Infinity 
+Vertex id: 5 Room{(X, Y)= (444.0, 102.0)} Distance: Infinity 
+Vertex id: 12 Room{(X, Y)= (80.0, 97.0)} Distance: Infinity 
+Vertex id: 19 Room{(X, Y)= (151.0, 175.0)} Distance: Infinity 
+Vertex id: 26 Room{(X, Y)= (396.0, 226.0)} Distance: Infinity 
+Vertex id: 14 Room{(X, Y)= (496.0, 365.0)} Distance: Infinity 
+Vertex id: 25 Room{(X, Y)= (538.0, 324.0)} Distance: Infinity 
+Vertex id: 1 Room{(X, Y)= (690.0, 310.0)} Distance: Infinity 
+Vertex id: 0 Room{(X, Y)= (483.0, 447.0)} Distance: Infinity 
+Vertex id: 11 Room{(X, Y)= (768.0, 255.0)} Distance: Infinity 
+Vertex id: 9 Room{(X, Y)= (758.0, 461.0)} Distance: Infinity 
+Vertex id: 22 Room{(X, Y)= (656.0, 554.0)} Distance: Infinity 
+Vertex id: 23 Room{(X, Y)= (717.0, 481.0)} Distance: Infinity 
+Vertex id: 24 Room{(X, Y)= (769.0, 76.0)} Distance: Infinity 
+Vertex id: 17 Room{(X, Y)= (72.0, 566.0)} Distance: Infinity 
+Vertex id: 21 Room{(X, Y)= (273.0, 461.0)} Distance: Infinity 
+Vertex id: 15 Room{(X, Y)= (327.0, 611.0)} Distance: Infinity 
+
+********
+A*
+
+Vertex id: 22 Room{(X, Y)= (656.0, 554.0)}
+Vertex id: 9 Room{(X, Y)= (758.0, 461.0)}
+Vertex id: 11 Room{(X, Y)= (768.0, 255.0)}
+Vertex id: 1 Room{(X, Y)= (690.0, 310.0)}
+Vertex id: 25 Room{(X, Y)= (538.0, 324.0)}
+Vertex id: 14 Room{(X, Y)= (496.0, 365.0)}
+Vertex id: 20 Room{(X, Y)= (291.0, 437.0)}
+Vertex id: 7 Room{(X, Y)= (15.0, 542.0)}
+Vertex id: 16 Room{(X, Y)= (34.0, 587.0)}
+Vertex id: 10 Room{(X, Y)= (85.0, 618.0)}
+Vertex id: 8 Room{(X, Y)= (119.0, 744.0)}
+Vertex id: 13 Room{(X, Y)= (212.0, 704.0)}
+Room{(X, Y)= (418.0, 756.0)}

@@ -1,0 +1,74 @@
+Caminhos:
+BFT
+class graph.BreadthFirstTraversal
+Vertex id: 13 Room{(X, Y)= (475.0, 109.0)} Distance: 0.0 
+Vertex id: 20 Room{(X, Y)= (550.0, 187.0)} Distance: 108.20813 
+Vertex id: 7 Room{(X, Y)= (707.0, 389.0)} Distance: 364.04596 
+Vertex id: 2 Room{(X, Y)= (771.0, 499.0)} Distance: 491.30945 
+Vertex id: 10 Room{(X, Y)= (787.0, 511.0)} Distance: 511.30945 
+Vertex id: 12 Room{(X, Y)= (769.0, 587.0)} Distance: 589.4119 
+Vertex id: 14 Room{(X, Y)= (745.0, 503.0)} Distance: 554.0646 
+Vertex id: 3 Room{(X, Y)= (714.0, 750.0)} Distance: 761.441 
+Vertex id: 8 Room{(X, Y)= (496.0, 430.0)} Distance: 813.5448 
+Vertex id: 22 Room{(X, Y)= (584.0, 661.0)} Distance: 918.9878 
+Vertex id: 17 Room{(X, Y)= (437.0, 379.0)} Distance: 891.532 
+Vertex id: 15 Room{(X, Y)= (409.0, 593.0)} Distance: 1106.735 
+Vertex id: 4 Room{(X, Y)= (464.0, 672.0)} Distance: 1202.995 
+Vertex id: 1 Room{(X, Y)= (329.0, 479.0)} Distance: 1246.0045 
+Vertex id: 5 Room{(X, Y)= (239.0, 538.0)} Distance: 1353.6196 
+Vertex id: 21 Room{(X, Y)= (187.0, 524.0)} Distance: 1407.4713 
+Vertex id: 19 Room{(X, Y)= (233.0, 709.0)} Distance: 1524.7249 
+Vertex id: 6 Room{(X, Y)= (73.0, 398.0)} Distance: 1577.3889 
+Vertex id: 11 Room{(X, Y)= (254.0, 742.0)} Distance: 1563.8401 
+Vertex id: 0 Room{(X, Y)= (184.0, 270.0)} Distance: 1746.8145 
+Vertex id: 9 Room{(X, Y)= (62.0, 72.0)} Distance: 1979.3827 
+Vertex id: 16 Room{(X, Y)= (102.0, 78.0)} Distance: 2019.8302 
+Vertex id: 18 Room{(X, Y)= (203.0, 98.0)} Distance: 2122.7913 
+
+********
+DFT
+class graph.DepthFirstTraversal
+Vertex id: 13 Room{(X, Y)= (475.0, 109.0)} Distance: Infinity 
+Vertex id: 20 Room{(X, Y)= (550.0, 187.0)} Distance: Infinity 
+Vertex id: 7 Room{(X, Y)= (707.0, 389.0)} Distance: Infinity 
+Vertex id: 2 Room{(X, Y)= (771.0, 499.0)} Distance: Infinity 
+Vertex id: 10 Room{(X, Y)= (787.0, 511.0)} Distance: Infinity 
+Vertex id: 12 Room{(X, Y)= (769.0, 587.0)} Distance: Infinity 
+Vertex id: 3 Room{(X, Y)= (714.0, 750.0)} Distance: Infinity 
+Vertex id: 22 Room{(X, Y)= (584.0, 661.0)} Distance: Infinity 
+Vertex id: 15 Room{(X, Y)= (409.0, 593.0)} Distance: Infinity 
+Vertex id: 4 Room{(X, Y)= (464.0, 672.0)} Distance: Infinity 
+Vertex id: 1 Room{(X, Y)= (329.0, 479.0)} Distance: Infinity 
+Vertex id: 5 Room{(X, Y)= (239.0, 538.0)} Distance: Infinity 
+Vertex id: 21 Room{(X, Y)= (187.0, 524.0)} Distance: Infinity 
+Vertex id: 6 Room{(X, Y)= (73.0, 398.0)} Distance: Infinity 
+Vertex id: 0 Room{(X, Y)= (184.0, 270.0)} Distance: Infinity 
+Vertex id: 9 Room{(X, Y)= (62.0, 72.0)} Distance: Infinity 
+Vertex id: 16 Room{(X, Y)= (102.0, 78.0)} Distance: Infinity 
+Vertex id: 18 Room{(X, Y)= (203.0, 98.0)} Distance: Infinity 
+Vertex id: 19 Room{(X, Y)= (233.0, 709.0)} Distance: Infinity 
+Vertex id: 11 Room{(X, Y)= (254.0, 742.0)} Distance: Infinity 
+Vertex id: 14 Room{(X, Y)= (745.0, 503.0)} Distance: Infinity 
+Vertex id: 8 Room{(X, Y)= (496.0, 430.0)} Distance: Infinity 
+Vertex id: 17 Room{(X, Y)= (437.0, 379.0)} Distance: Infinity 
+
+********
+A*
+
+Vertex id: 18 Room{(X, Y)= (203.0, 98.0)}
+Vertex id: 16 Room{(X, Y)= (102.0, 78.0)}
+Vertex id: 9 Room{(X, Y)= (62.0, 72.0)}
+Vertex id: 0 Room{(X, Y)= (184.0, 270.0)}
+Vertex id: 6 Room{(X, Y)= (73.0, 398.0)}
+Vertex id: 21 Room{(X, Y)= (187.0, 524.0)}
+Vertex id: 5 Room{(X, Y)= (239.0, 538.0)}
+Vertex id: 1 Room{(X, Y)= (329.0, 479.0)}
+Vertex id: 15 Room{(X, Y)= (409.0, 593.0)}
+Vertex id: 22 Room{(X, Y)= (584.0, 661.0)}
+Vertex id: 3 Room{(X, Y)= (714.0, 750.0)}
+Vertex id: 12 Room{(X, Y)= (769.0, 587.0)}
+Vertex id: 10 Room{(X, Y)= (787.0, 511.0)}
+Vertex id: 2 Room{(X, Y)= (771.0, 499.0)}
+Vertex id: 7 Room{(X, Y)= (707.0, 389.0)}
+Vertex id: 20 Room{(X, Y)= (550.0, 187.0)}
+Room{(X, Y)= (475.0, 109.0)}
