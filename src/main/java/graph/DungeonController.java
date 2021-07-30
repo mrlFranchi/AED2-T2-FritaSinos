@@ -11,7 +11,7 @@ public class DungeonController
 
     private AbstractGraph dungeon;
 
-    private static final int TOTAL_LOCKS = 3;
+    private static final int TOTAL_LOCKS = 7;
     private Room entrance;
     private Room exit;
 
@@ -33,13 +33,17 @@ public class DungeonController
         setLocksAndKeys(dungeonController);
         CreateDungeonGraphic(dungeonController, traversalPath,"Keys And Locks");
 
+        System.out.println("\n\nCaminhos:");
+        System.out.println("BFT");
         TraversalStrategyInterface BFT = new BreadthFirstTraversal(dungeonController.dungeon);
         BFT.traverseGraph(dungeonController.entrance, dungeonController.exit);
+        System.out.println("********\nDFT");
         TraversalStrategyInterface DFT = new DepthFirstTraversal(dungeonController.dungeon);
         DFT.traverseGraph(dungeonController.entrance, dungeonController.exit);
+        System.out.println("********\nA*");
         TraversalStrategyInterface aStar = new AStartPathFind(dungeonController.dungeon);
         aStar.traverseGraph(dungeonController.entrance, dungeonController.exit);
-
+        aStar.printShortestPath(dungeonController.entrance, dungeonController.exit);
 
     }
 

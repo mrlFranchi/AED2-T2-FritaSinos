@@ -79,7 +79,8 @@ public final class AStartPathFind extends TraversalStrategyInterface
             verticesToVisit.remove(currentVisitedVertex);
         }
         printDistances();
-        printShortestPath(source, destination);
+        //printShortestPath(source, destination);
+        //printPath();
     }
 
     private Vertex peekVertexWithLowestDistance()

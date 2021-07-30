@@ -90,6 +90,7 @@ public abstract class TraversalStrategyInterface
 
     protected void printPath()
     {
+        System.out.println(this.getClass());
         StringBuilder visitedPath = new StringBuilder();
         for (Vertex vertex : traversalPath)
         {
@@ -108,12 +109,13 @@ public abstract class TraversalStrategyInterface
         int currentIndex = destinationIndex;
         do
         {
-            shortestPath.append(graph.getVertices().get(currentIndex)).append('-');
+            shortestPath.append("Vertex id: ").append(currentIndex).append(" ").append(graph.getVertices().get(currentIndex)).append("\n");
             currentIndex = getPredecessorVertexIndex(currentIndex);
         }while(currentIndex != sourceIndex);
         shortestPath.append(graph.getVertices().get(currentIndex));
         String shortestPathString = "\n"+ shortestPath +"\n";
         LOGGER.info(shortestPathString);
+        System.out.println(shortestPathString);
     }
 
     protected List<Vertex> getShortestPath(Vertex source, Vertex destination)
